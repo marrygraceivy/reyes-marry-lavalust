@@ -64,10 +64,10 @@
             background-color: #f8fafc;
             padding: 14px 24px;
             font-size: 0.75rem;
+            font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.05em;
             color: var(--text-muted);
-            font-weight: 600;
             border-bottom: 1px solid var(--border);
         }
 
@@ -83,25 +83,6 @@
 
         tr:hover {
             background-color: #f8fafc;
-        }
-
-        .avatar {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            background: var(--primary-light);
-            color: var(--primary);
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-            font-size: 0.85rem;
-            margin-right: 10px;
-        }
-
-        .name-cell {
-            display: flex;
-            align-items: center;
         }
 
         .badge {
@@ -125,7 +106,8 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>User</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
                     <th>Email Address</th>
                     <th>Username</th>
                 </tr>
@@ -133,15 +115,11 @@
             <tbody>
                 <?php foreach($users as $user): ?>
                 <tr>
-                    <td><strong><?= $user['id']; ?></strong></td>
-                    <td>
-                        <div class="name-cell">
-                            <div class="avatar"><?= strtoupper(substr($user['firstname'], 0, 1)); ?></div>
-                            <?= $user['firstname'] . ' ' . $user['lastname']; ?>
-                        </div>
-                    </td>
-                    <td><?= $user['email']; ?></td>
-                    <td><span class="badge">@<?= $user['username']; ?></span></td>
+                    <td><strong><?= htmlspecialchars($user['id']); ?></strong></td>
+                    <td><?= htmlspecialchars($user['firstname']); ?></td>
+                    <td><?= htmlspecialchars($user['lastname']); ?></td>
+                    <td><?= htmlspecialchars($user['email']); ?></td>
+                    <td><span class="badge">@<?= htmlspecialchars($user['username']); ?></span></td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>
