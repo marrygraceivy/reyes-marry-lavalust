@@ -26,11 +26,9 @@ $config['environment'] = getenv('APP_ENV') ?: 'development';
 | | Base Site URL
 | |--------------------------------------------------------------------------
 */
-$protocol = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? "https://" : "http://";
-$root = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'localhost';
-$path = str_replace(basename($_SERVER['SCRIPT_NAME']), "", $_SERVER['SCRIPT_NAME']);
 
-$config['base_url'] = $protocol . $root . $path;
+
+$config['base_url'] = 'https://reyes-marry.onrender.com/';
 
 /*
 | |--------------------------------------------------------------------------
