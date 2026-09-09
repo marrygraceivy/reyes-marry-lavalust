@@ -121,7 +121,8 @@
 
     <h1>Add Product</h1>
 
-    <form action="<?= site_url('products/store'); ?>" method="POST">
+    <!-- Updated Form Action -->
+    <form action="<?= site_url('login/products/store'); ?>" method="POST">
 
         <label>Product Name</label>
         <input type="text" name="product_name" placeholder="Enter product name" required>
@@ -137,7 +138,8 @@
 
         <div class="buttons">
             <button type="submit" class="save-btn">Save Product</button>
-            <a href="<?= site_url('products'); ?>" class="back-btn">Back</a>
+            <!-- Updated Back Link -->
+            <a href="<?= site_url('login/products'); ?>" class="back-btn">Back</a>
         </div>
 
     </form>

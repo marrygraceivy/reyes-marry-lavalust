@@ -33,7 +33,7 @@ class ProductController extends Controller
 
         $this->ProductModel->insert($data);
 
-        redirect('products');
+        redirect('login/products');
     }
 
     public function edit($id)
@@ -41,7 +41,7 @@ class ProductController extends Controller
         $product = $this->ProductModel->get_by_id($id);
 
         if (!$product) {
-            redirect('products');
+            redirect('login/products');
             return;
         }
 
@@ -61,13 +61,13 @@ class ProductController extends Controller
 
         $this->ProductModel->update($id, $data);
 
-        redirect('products');
+        redirect('login/products');
     }
 
     public function delete($id)
     {
         $this->ProductModel->delete($id);
 
-        redirect('products');
+        redirect('login/products');
     }
 }

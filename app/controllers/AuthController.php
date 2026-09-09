@@ -15,13 +15,12 @@ class AuthController extends Controller
             $username = $this->io->post('username');
             $password = $this->io->post('password');
 
-            // Temporary login credentials
             if ($username === 'admin' && $password === 'admin123') {
 
                 $_SESSION['logged_in'] = true;
                 $_SESSION['username'] = $username;
 
-                redirect('products');
+                redirect('login/products');
 
             } else {
 

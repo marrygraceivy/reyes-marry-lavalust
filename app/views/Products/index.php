@@ -179,7 +179,7 @@
             <!-- ADD PRODUCT -->
 
             <a
-                href="<?= site_url('products/create'); ?>"
+                href="<?= site_url('login/products/create'); ?>"
                 class="add-btn"
             >
                 + Add Product
@@ -257,7 +257,7 @@
                         <!-- EDIT -->
 
                         <a
-                            href="<?= site_url('products/edit/' . $product['id']); ?>"
+                            href="<?= site_url('login/products/edit/' . $product['id']); ?>"
                             class="edit-btn"
                         >
                             Edit
@@ -267,7 +267,7 @@
                         <!-- DELETE -->
 
                         <a
-                            href="<?= site_url('products/delete/' . $product['id']); ?>"
+                            href="<?= site_url('login/products/delete/' . $product['id']); ?>"
                             class="delete-btn"
                             onclick="return confirm('Are you sure you want to delete this product?');"
                         >

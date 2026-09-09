@@ -128,7 +128,7 @@
     <?php if (!empty($product)): ?>
 
         <form
-            action="<?= site_url('products/update/' . $product['id']); ?>"
+            action="<?= site_url('login/products/update/' . $product['id']); ?>"
             method="POST"
         >
 
@@ -195,7 +195,7 @@
                 </button>
 
                 <a
-                    href="<?= site_url('products'); ?>"
+                    href="<?= site_url('login/products'); ?>"
                     class="back-btn"
                 >
                     Back
@@ -210,7 +210,7 @@
         <p>Product not found.</p>
 
         <a
-            href="<?= site_url('products'); ?>"
+            href="<?= site_url('login/products'); ?>"
             class="back-btn"
         >
             Back to Products
