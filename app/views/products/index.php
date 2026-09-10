@@ -5,8 +5,8 @@
 
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
+    <meta 
+        name="viewport" 
         content="width=device-width, initial-scale=1.0"
     >
 
@@ -178,8 +178,8 @@
 
             <!-- ADD PRODUCT -->
 
-            <a
-                href="<?= site_url('login/products/create'); ?>"
+            <a 
+                href="<?= site_url('login/products/create'); ?>" 
                 class="add-btn"
             >
                 + Add Product
@@ -188,9 +188,9 @@
 
             <!-- LOGOUT -->
 
-            <a
-                href="<?= site_url('logout'); ?>"
-                class="logout-btn"
+            <a 
+                href="<?= site_url('logout'); ?>" 
+                class="logout-btn" 
                 onclick="return confirm('Are you sure you want to logout?');"
             >
                 Logout
@@ -216,6 +216,8 @@
                 <th>Price</th>
 
                 <th>Quantity</th>
+
+                <th>Created At</th>
 
                 <th>Actions</th>
 
@@ -253,11 +255,15 @@
                     </td>
 
                     <td>
+                        <?= htmlspecialchars($product['created_at']); ?>
+                    </td>
+
+                    <td>
 
                         <!-- EDIT -->
 
-                        <a
-                            href="<?= site_url('login/products/edit/' . $product['id']); ?>"
+                        <a 
+                            href="<?= site_url('login/products/edit/' . $product['id']); ?>" 
                             class="edit-btn"
                         >
                             Edit
@@ -266,9 +272,9 @@
 
                         <!-- DELETE -->
 
-                        <a
-                            href="<?= site_url('login/products/delete/' . $product['id']); ?>"
-                            class="delete-btn"
+                        <a 
+                            href="<?= site_url('login/products/delete/' . $product['id']); ?>" 
+                            class="delete-btn" 
                             onclick="return confirm('Are you sure you want to delete this product?');"
                         >
                             Delete
@@ -284,8 +290,8 @@
 
             <tr>
 
-                <td
-                    colspan="6"
+                <td 
+                    colspan="7" 
                     class="empty"
                 >
                     No products found.

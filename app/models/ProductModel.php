@@ -6,9 +6,7 @@ class ProductModel extends Model
     protected $table = 'products';
 
 
-    // ======================================================
-    // GET ALL PRODUCTS
-    // ======================================================
+    
     public function get_all()
     {
         return $this->db
@@ -17,9 +15,7 @@ class ProductModel extends Model
     }
 
 
-    // ======================================================
-    // GET PRODUCT BY ID
-    // ======================================================
+
     public function get_by_id($id)
     {
         return $this->db
@@ -28,10 +24,7 @@ class ProductModel extends Model
             ->get();
     }
 
-
-    // ======================================================
-    // INSERT PRODUCT
-    // ======================================================
+    
     public function insert($data)
     {
         return $this->db
@@ -40,9 +33,7 @@ class ProductModel extends Model
     }
 
 
-    // ======================================================
-    // UPDATE PRODUCT
-    // ======================================================
+
     public function update($id, $data)
     {
         return $this->db
@@ -52,9 +43,7 @@ class ProductModel extends Model
     }
 
 
-    // ======================================================
-    // DELETE PRODUCT
-    // ======================================================
+
     public function delete($id)
     {
         return $this->db
